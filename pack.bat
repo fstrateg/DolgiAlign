@@ -19,7 +19,7 @@ echo Формирование EPF...
 
 %DESIGNER% DESIGNER /F "%DB%" /LoadExternalDataProcessorOrReportFromFiles "%SRC%" "%EPF%" /Out log.txt /DisableStartupDialogs
 
-type log_pack.txt
+type log.txt
 
 REM echo Done
 REM pause
