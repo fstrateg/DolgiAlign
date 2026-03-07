@@ -17,7 +17,7 @@ set EPF=C:\Games\1C\Projects\UpdateDolgi\bin\DolgiAlign.epf
 
 echo Формирование EPF...
 
-%DESIGNER% DESIGNER /F "%DB%" /LoadExternalDataProcessorOrReportFromFiles "%SRC%" "%EPF%" /Out log_pack.txt /DisableStartupDialogs
+%DESIGNER% DESIGNER /F "%DB%" /LoadExternalDataProcessorOrReportFromFiles "%SRC%" "%EPF%" /Out log.txt /DisableStartupDialogs
 
 type log_pack.txt
 
