@@ -3,7 +3,7 @@ chcp 65001 >nul
 
 set "DESIGNER=C:\Program Files\1cv8\8.3.27.1508\bin\1cv8.exe"
 
-set "DB=C:\VHD\Work\1C\AquaTrade"
+set "DB=D:\1C_Bases\AquaTrade"
 set "DB_USER=Камила Токтобаева"
 set "DB_PASS="
 
