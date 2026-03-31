@@ -1,18 +1,14 @@
 @echo off
+call "%~dp01c-env.bat"
 
-REM Установка кодовой страницы для корректного отображения кириллицы
-chcp 65001 >nul
-
-set DESIGNER="C:\Program Files\1cv8\8.3.25.1374\bin\1cv8.exe"
-set DB=C:\Games\1C\EmptyDb
-set EPF=C:\Games\1C\Projects\UpdateDolgi\bin\DolgiAlign.epf
-set OUT=C:\Games\1C\Projects\UpdateDolgi\src
+set "OUT=%~dp0src"
 
 echo Cleaning old source...
 if exist "%OUT%" rmdir /s /q "%OUT%"
 
 echo Unpacking EPF...
 
-%DESIGNER% DESIGNER /F "%DB%" /DumpExternalDataProcessorOrReportToFiles "%OUT%" "%EPF%" /Out log.txt /DisableStartupDialogs
+"%DESIGNER%" DESIGNER /F "%DB%" %AUTH% /DumpExternalDataProcessorOrReportToFiles "%OUT%" "%EPF%" /Out log.txt /DisableStartupDialogs
+if errorlevel 1 exit /b %errorlevel%
 
 type log.txt
